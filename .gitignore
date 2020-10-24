@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+leviathan/.vs
+leviathan/bin/IntermediateFiles
+*.ilk
+*.pdb

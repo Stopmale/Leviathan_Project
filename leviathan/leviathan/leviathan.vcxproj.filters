@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\common">
+      <UniqueIdentifier>{1a4a4bb6-f587-4b4f-a8f2-dbfbb12f7686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\utility">
+      <UniqueIdentifier>{f0432197-66b8-4c2e-929f-2275d61a4bb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\utility\rapidjson">
+      <UniqueIdentifier>{30bc41d0-5330-4c62-ae97-babcd2656688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\utility\rapidjson\error">
+      <UniqueIdentifier>{7e0f4b0b-3fe6-47b8-8b0f-4710515d70c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\utility\rapidjson\internal">
+      <UniqueIdentifier>{3c934696-d507-418f-8188-a27bd77899b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\utility\rapidjson\msinttypes">
+      <UniqueIdentifier>{cf85d95a-6140-415e-bf64-797ffd423d82}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="common\leviathan.cpp">
+      <Filter>소스 파일\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\network.cpp">
+      <Filter>소스 파일\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utility\singleton.h">
+      <Filter>소스 파일\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\error\en.h">
+      <Filter>소스 파일\utility\rapidjson\error</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\error\error.h">
+      <Filter>소스 파일\utility\rapidjson\error</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\biginteger.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\diyfp.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\dtoa.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\ieee754.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\itoa.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\meta.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\pow10.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\regex.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\stack.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\strfunc.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\strtod.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\internal\swap.h">
+      <Filter>소스 파일\utility\rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\msinttypes\inttypes.h">
+      <Filter>소스 파일\utility\rapidjson\msinttypes</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\msinttypes\stdint.h">
+      <Filter>소스 파일\utility\rapidjson\msinttypes</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\allocators.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\document.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\encodedstream.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\encodings.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\filereadstream.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\filewritestream.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\fwd.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\istreamwrapper.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\memorybuffer.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\memorystream.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\ostreamwrapper.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\pointer.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\prettywriter.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\rapidjson.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\reader.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\schema.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\stream.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\stringbuffer.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\rapidjson\writer.h">
+      <Filter>소스 파일\utility\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="common\leviathan.h">
+      <Filter>소스 파일\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\network.h">
+      <Filter>소스 파일\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
