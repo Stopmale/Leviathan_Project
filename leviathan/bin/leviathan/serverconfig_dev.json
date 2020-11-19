@@ -1,0 +1,11 @@
+{
+    "serverID" : 1,
+    "channel" : 1,
+    "serverType" : "debug",
+
+    "environment" :
+    {
+        "host" : "127.0.0.1",
+        "port" : 7261
+    }
+}

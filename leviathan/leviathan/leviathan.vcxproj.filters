@@ -31,6 +31,9 @@
     <Filter Include="소스 파일\utility\rapidjson\msinttypes">
       <UniqueIdentifier>{cf85d95a-6140-415e-bf64-797ffd423d82}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\control">
+      <UniqueIdentifier>{e93880e3-0b02-4554-91ca-11ed969a592c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,6 +44,9 @@
     </ClCompile>
     <ClCompile Include="common\network.cpp">
       <Filter>소스 파일\common</Filter>
+    </ClCompile>
+    <ClCompile Include="control\server_control.cpp">
+      <Filter>소스 파일\control</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="common\network.h">
       <Filter>소스 파일\common</Filter>
+    </ClInclude>
+    <ClInclude Include="control\server_control.h">
+      <Filter>소스 파일\control</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

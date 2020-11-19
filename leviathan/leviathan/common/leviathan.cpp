@@ -8,7 +8,12 @@ Leviathan::cLeviathan::~cLeviathan()
 {
 }
 
-void Leviathan::cLeviathan::do_somting()
+bool Leviathan::cLeviathan::Booting(std::string config)
 {
-	std::cout << "hello" << std::endl;
+	if (!LoadConfig(config))
+	{
+		return false;
+	}
+
+	return true;
 }

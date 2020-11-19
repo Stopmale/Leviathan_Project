@@ -13,14 +13,22 @@
 #include <chrono>
 #include <vector>
 #include <numeric>
+#include <fstream>
+#include <sstream>
 //
 
+// control header file include
+#include "server_control.h"
+//
+
+// utility header file include
 #include "singleton.h"
+//
 
 namespace Leviathan
 {
 
-class cLeviathan : public cSingleton<cLeviathan>
+class cLeviathan : public cServerControl, public cSingleton<cLeviathan>
 {
 public:
 	cLeviathan();
@@ -29,7 +37,7 @@ public:
 private:
 
 public:
-	void do_somting();
+	bool Booting(std::string config);
 };
 
 }

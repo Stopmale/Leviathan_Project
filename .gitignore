@@ -34,3 +34,7 @@ leviathan/.vs
 leviathan/bin/IntermediateFiles
 *.ilk
 *.pdb
+leviathan/bin/leviathan/.vs
+leviathan/leviathan/leviathan.vcxproj.user
+*.user
+leviathan/leviathan/leviathan.vcxproj.user

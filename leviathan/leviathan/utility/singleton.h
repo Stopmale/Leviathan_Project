@@ -13,7 +13,7 @@ private:
 	static std::unique_ptr<T> inst;
 
 public:
-	static T& instance()
+	static T& Instance()
 	{
 		std::call_once(flag, []()
 			{

@@ -10,10 +10,12 @@ int main(int argc, wchar_t* argv[])
     Document document;
     document.Parse(json);
 
-    Leviathan::cLeviathan::instance().do_somting();
+    std::string dir_config = "";
+    if (argc == 2)
+        dir_config = argv[2];
+    Leviathan::cLeviathan::Instance().Booting("test");
 
     std::cout << document["hello"].GetString() << std::endl;
-    getchar();
 
     return 0;
 }
