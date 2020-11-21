@@ -40,4 +40,9 @@ public:
 	bool Booting(std::string config);
 };
 
+char* WideCharToMultiByte(const wchar_t* wstr);
+std::string WideCharToMultiByte(const std::wstring& wstr);
+
+wchar_t* MultiByteToWideChar(const char* str);
+std::wstring MultiByteToWideChar(const std::string& str);
 }

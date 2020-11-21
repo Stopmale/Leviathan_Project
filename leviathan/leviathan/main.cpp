@@ -12,10 +12,10 @@ int main(int argc, wchar_t* argv[])
 
     std::string dir_config = "";
     if (argc == 2)
-        dir_config = argv[2];
-    Leviathan::cLeviathan::Instance().Booting("test");
+        dir_config = Leviathan::WideCharToMultiByte(argv[2]);
+    Leviathan::cLeviathan::Instance().Booting(dir_config);
 
-    std::cout << document["hello"].GetString() << std::endl;
+    //std::cout << document["hello"].GetString() << std::endl;
 
     return 0;
 }
