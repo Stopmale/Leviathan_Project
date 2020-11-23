@@ -5,7 +5,7 @@ using namespace rapidjson;
 
 const char json[] = " { \"hello\" : \"world\", \"t\" : true , \"f\" : false, \"n\": null, \"i\":123, \"pi\": 3.1416, \"a\":[1, 2, 3, 4] } ";
 
-int main(int argc, wchar_t* argv[])
+int main(int argc, char* argv[])
 {
     _putenv("TZ=UTC");
 
@@ -14,7 +14,7 @@ int main(int argc, wchar_t* argv[])
 
     std::string dir_config = "";
     if (argc == 2)
-        dir_config = Leviathan::WideCharToMultiByte(argv[1]);
+        dir_config = argv[1];
     Leviathan::cLeviathan::Instance().Booting(dir_config);
 
     //std::cout << document["hello"].GetString() << std::endl;
