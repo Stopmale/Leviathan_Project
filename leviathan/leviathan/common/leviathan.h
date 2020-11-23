@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 // gperftools
 #ifdef __TC_MALLOC__

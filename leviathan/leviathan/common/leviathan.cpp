@@ -1,4 +1,4 @@
-#include "leviathan.h"
+﻿#include "leviathan.h"
 #include <Windows.h>
 
 Leviathan::cLeviathan::cLeviathan()
@@ -61,12 +61,12 @@ wchar_t* Leviathan::MultiByteToWideChar(const char* str)
 
 std::wstring Leviathan::MultiByteToWideChar(const std::string& str)
 {
-	int num_chars = ::MultiByteToWideChar(CP_UTF8, 0, str.c_str(), str.length(), NULL, 0);
+	int num_chars = ::MultiByteToWideChar(CP_UTF8, 0, str.c_str(), (int)str.length(), NULL, 0);
 	std::wstring wstrTo;
 	if (num_chars)
 	{
 		wstrTo.resize(num_chars);
-		::MultiByteToWideChar(CP_UTF8, 0, str.c_str(), str.length(), &wstrTo[0], num_chars);
+		::MultiByteToWideChar(CP_UTF8, 0, str.c_str(), (int)str.length(), &wstrTo[0], num_chars);
 	}
 	return wstrTo;
 }

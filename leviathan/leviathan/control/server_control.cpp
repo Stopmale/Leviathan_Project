@@ -1,8 +1,8 @@
-#include "leviathan.h"
+﻿#include "leviathan.h"
 #include "rapidjson/document.h"
 #include "rapidjson/filereadstream.h"
 
-Leviathan::cServerControl::cServerControl()
+Leviathan::cServerControl::cServerControl() : serverID(0), channel(0), serverType(""), host(""), port(0)
 {
 }
 
@@ -27,6 +27,5 @@ bool Leviathan::cServerControl::LoadConfig(const std::string name)
 
 	rapidjson::Document config;
 	config.Parse(data.c_str());
-
 	return true;
 }

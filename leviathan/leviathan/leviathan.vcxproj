@@ -157,6 +157,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="common\define.h" />
     <ClInclude Include="common\leviathan.h" />
     <ClInclude Include="common\network.h" />
     <ClInclude Include="control\server_control.h" />

@@ -1,4 +1,6 @@
-#pragma once
+﻿#pragma once
+
+#include "define.h"
 
 namespace Leviathan
 {
@@ -10,6 +12,11 @@ public:
 	virtual ~cServerControl();
 
 private:
+	ServerID serverID;
+	Channel channel;
+	ServerType serverType;
+	Host host;
+	Port port;
 	
 public:
 	bool LoadConfig(const std::string name);

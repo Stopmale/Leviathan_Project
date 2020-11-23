@@ -167,5 +167,8 @@
     <ClInclude Include="control\server_control.h">
       <Filter>소스 파일\control</Filter>
     </ClInclude>
+    <ClInclude Include="common\define.h">
+      <Filter>소스 파일\common</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
