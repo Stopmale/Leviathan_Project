@@ -24,7 +24,6 @@ bool Leviathan::cLeviathan::Booting(std::string config)
 	}
 
 	std::cout << "[SYSTEM] booting success" << std::endl;
-
 	return true;
 }
 

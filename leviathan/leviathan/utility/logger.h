@@ -14,34 +14,7 @@ namespace Leviathan
 static class cLogger
 {
 public:
-	static bool init(std::string name, int server_id, int log_level)
-	{
-		try
-		{
-			_mkdir("./logs");
-			char logPath[MAX_PATH] = { 0 };
-
-			_snprintf_s(logPath, _countof(logPath), "./logs/sys.%s.%03d.txt", name.c_str(), server_id);
-			spdlog::daily_logger_mt(NAME_LOG_SYSTEM, logPath, 0, 0);
-
-			_snprintf_s(logPath, _countof(logPath), "./logs/db.%s.%03d.txt", name.c_str(), server_id);
-			spdlog::daily_logger_mt(NAME_LOG_DB, logPath, 0, 0);
-
-			_snprintf_s(logPath, _countof(logPath), "./logs/test.%s.%03d.txt", name.c_str(), server_id);
-			spdlog::daily_logger_mt(NAME_LOG_TEST, logPath, 0, 0);
-
-			spdlog::set_level((spdlog::level::level_enum)log_level);
-			spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^---%L---%$] [thread %t] %v");
-			std::cout << "[SYSTEM] success init log system" << std::endl;
-		}
-		catch (spdlog::spdlog_ex ex)
-		{
-			std::cout << "[SYSTEM] fail init log system :: " << ex.what() << std::endl;
-			return false;
-		}
-
-		return true;
-	}
+	static bool init(std::string name, int server_id, int log_level);
 
 public:
 	static class sys
@@ -51,6 +24,65 @@ public:
 		static void info(const char* fmt, const Args&... args)
 		{
 			spdlog::get(NAME_LOG_SYSTEM)->info(fmt, args...);
+		}
+
+		template <typename... Args>
+		static void warn(const char* fmt, const Args&... args)
+		{
+			spdlog::get(NAME_LOG_SYSTEM)->warn(fmt, args...);
+		}
+
+		template <typename... Args>
+		static void debug(const char* fmt, const Args&... args)
+		{
+			spdlog::get(NAME_LOG_SYSTEM)->debug(fmt, args...);
+		}
+
+		template <typename... Args>
+		static void error(const char* fmt, const Args&... args)
+		{
+			spdlog::get(NAME_LOG_SYSTEM)->error(fmt, args...);
+		}
+
+		template <typename... Args>
+		static void critical(const char* fmt, const Args&... args)
+		{
+			spdlog::get(NAME_LOG_SYSTEM)->critical(fmt, args...);
+		}
+	};
+
+public:
+	static class db
+	{
+	public:
+		template <typename... Args>
+		static void info(const char* fmt, const Args&... args)
+		{
+			spdlog::get(NAME_LOG_DB)->info(fmt, args...);
+		}
+
+		template <typename... Args>
+		static void warn(const char* fmt, const Args&... args)
+		{
+			spdlog::get(NAME_LOG_DB)->warn(fmt, args...);
+		}
+
+		template <typename... Args>
+		static void debug(const char* fmt, const Args&... args)
+		{
+			spdlog::get(NAME_LOG_DB)->debug(fmt, args...);
+		}
+
+		template <typename... Args>
+		static void error(const char* fmt, const Args&... args)
+		{
+			spdlog::get(NAME_LOG_DB)->error(fmt, args...);
+		}
+
+		template <typename... Args>
+		static void critical(const char* fmt, const Args&... args)
+		{
+			spdlog::get(NAME_LOG_DB)->critical(fmt, args...);
 		}
 	};
 };
