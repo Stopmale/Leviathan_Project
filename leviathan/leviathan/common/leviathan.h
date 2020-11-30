@@ -17,12 +17,13 @@
 #include <sstream>
 //
 
-// control header file include
-#include "server_control.h"
+// utility header file include
+#include "logger.h"
+#include "singleton.h"
 //
 
-// utility header file include
-#include "singleton.h"
+// control header file include
+#include "server_control.h"
 //
 
 namespace Leviathan

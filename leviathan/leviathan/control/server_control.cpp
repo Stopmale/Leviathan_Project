@@ -2,7 +2,7 @@
 #include "rapidjson/document.h"
 #include "rapidjson/filereadstream.h"
 
-Leviathan::cServerControl::cServerControl() : serverID(0), channel(0), serverType(""), host(""), port(0)
+Leviathan::cServerControl::cServerControl() : shutdown(false), serverID(0), channel(0), serverType(""), logLevel(1), host(""), port(0)
 {
 }
 
@@ -11,11 +11,12 @@ Leviathan::cServerControl::~cServerControl()
 }
 
 bool Leviathan::cServerControl::LoadConfig(const std::string name)
-{		
-	std::ifstream ifs(name.c_str());
+{
+	std::string name_added_json = name + ".json";
+	std::ifstream ifs(name_added_json.c_str());
 	if (!ifs.is_open())
 	{
-		std::cerr << "LoadConfig Error" << std::endl;
+		std::cerr << "[SYSTEM] LoadConfig Error" << std::endl;
 		return false;
 	}
 
@@ -27,5 +28,14 @@ bool Leviathan::cServerControl::LoadConfig(const std::string name)
 
 	rapidjson::Document config;
 	config.Parse(data.c_str());
+
+	serverID = config["serverID"].GetInt();
+	channel = config["channel"].GetInt();
+	serverType = config["serverType"].GetString();
+
+	logLevel = config["logLevel"].GetInt();
+
+	host = config["environment"]["host"].GetString();
+	port = config["environment"]["port"].GetInt();
 	return true;
 }

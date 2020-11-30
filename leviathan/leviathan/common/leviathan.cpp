@@ -11,10 +11,19 @@ Leviathan::cLeviathan::~cLeviathan()
 
 bool Leviathan::cLeviathan::Booting(std::string config)
 {
+	std::cout << "[SYSTEM] booting server..." << std::endl;
+
 	if (!LoadConfig(config))
 	{
 		return false;
 	}
+
+	if (!cLogger::init(config, GetServerID(), GetLogLevel()))
+	{
+		return false;
+	}
+
+	std::cout << "[SYSTEM] booting success" << std::endl;
 
 	return true;
 }

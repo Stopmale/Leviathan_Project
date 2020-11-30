@@ -38,3 +38,5 @@ leviathan/bin/leviathan/.vs
 leviathan/leviathan/leviathan.vcxproj.user
 *.user
 leviathan/leviathan/leviathan.vcxproj.user
+leviathan/bin/leviathan/logs
+leviathan/leviathan/.vs

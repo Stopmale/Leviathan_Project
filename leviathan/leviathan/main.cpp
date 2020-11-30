@@ -15,9 +15,15 @@ int main(int argc, char* argv[])
     std::string dir_config = "";
     if (argc == 2)
         dir_config = argv[1];
-    Leviathan::cLeviathan::Instance().Booting(dir_config);
+    if (!Leviathan::cLeviathan::Instance().Booting(dir_config))
+    {
+        return -1;
+    }
 
-    //std::cout << document["hello"].GetString() << std::endl;
-    std::cout << "안녕" << std::endl;
+    while (!Leviathan::cLeviathan::Instance().ShuttingDown())
+    {
+        Sleep(1);
+    }
+
     return 0;
 }

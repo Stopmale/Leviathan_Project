@@ -98,6 +98,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>sdk\rapidjson\;common\;control\;utility\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,7 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;__TC_MALLOC__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>common\;control\;utility\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>sdk\;common\;control\;utility\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,7 +142,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;__TC_MALLOC__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>common\;utility\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>sdk\;common\;control\;utility\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,49 +154,18 @@
   <ItemGroup>
     <ClCompile Include="common\leviathan.cpp" />
     <ClCompile Include="common\network.cpp" />
+    <ClCompile Include="common\socket.cpp" />
     <ClCompile Include="control\server_control.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="utility\logger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\define.h" />
     <ClInclude Include="common\leviathan.h" />
     <ClInclude Include="common\network.h" />
+    <ClInclude Include="common\socket.h" />
     <ClInclude Include="control\server_control.h" />
-    <ClInclude Include="utility\rapidjson\allocators.h" />
-    <ClInclude Include="utility\rapidjson\document.h" />
-    <ClInclude Include="utility\rapidjson\encodedstream.h" />
-    <ClInclude Include="utility\rapidjson\encodings.h" />
-    <ClInclude Include="utility\rapidjson\error\en.h" />
-    <ClInclude Include="utility\rapidjson\error\error.h" />
-    <ClInclude Include="utility\rapidjson\filereadstream.h" />
-    <ClInclude Include="utility\rapidjson\filewritestream.h" />
-    <ClInclude Include="utility\rapidjson\fwd.h" />
-    <ClInclude Include="utility\rapidjson\internal\biginteger.h" />
-    <ClInclude Include="utility\rapidjson\internal\diyfp.h" />
-    <ClInclude Include="utility\rapidjson\internal\dtoa.h" />
-    <ClInclude Include="utility\rapidjson\internal\ieee754.h" />
-    <ClInclude Include="utility\rapidjson\internal\itoa.h" />
-    <ClInclude Include="utility\rapidjson\internal\meta.h" />
-    <ClInclude Include="utility\rapidjson\internal\pow10.h" />
-    <ClInclude Include="utility\rapidjson\internal\regex.h" />
-    <ClInclude Include="utility\rapidjson\internal\stack.h" />
-    <ClInclude Include="utility\rapidjson\internal\strfunc.h" />
-    <ClInclude Include="utility\rapidjson\internal\strtod.h" />
-    <ClInclude Include="utility\rapidjson\internal\swap.h" />
-    <ClInclude Include="utility\rapidjson\istreamwrapper.h" />
-    <ClInclude Include="utility\rapidjson\memorybuffer.h" />
-    <ClInclude Include="utility\rapidjson\memorystream.h" />
-    <ClInclude Include="utility\rapidjson\msinttypes\inttypes.h" />
-    <ClInclude Include="utility\rapidjson\msinttypes\stdint.h" />
-    <ClInclude Include="utility\rapidjson\ostreamwrapper.h" />
-    <ClInclude Include="utility\rapidjson\pointer.h" />
-    <ClInclude Include="utility\rapidjson\prettywriter.h" />
-    <ClInclude Include="utility\rapidjson\rapidjson.h" />
-    <ClInclude Include="utility\rapidjson\reader.h" />
-    <ClInclude Include="utility\rapidjson\schema.h" />
-    <ClInclude Include="utility\rapidjson\stream.h" />
-    <ClInclude Include="utility\rapidjson\stringbuffer.h" />
-    <ClInclude Include="utility\rapidjson\writer.h" />
+    <ClInclude Include="utility\logger.h" />
     <ClInclude Include="utility\singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -2,6 +2,8 @@
     "serverID" : 1,
     "channel" : 1,
     "serverType" : "debug",
+    
+    "logLevel" : 1, 
 
     "environment" :
     {
