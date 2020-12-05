@@ -1,4 +1,6 @@
-#include "minidump.h"
+﻿#include "minidump.h"
+#include <time.h>
+#include <iostream>
 
 Leviathan::cMinidump *Leviathan::cMinidump::dumper = NULL;
 
@@ -105,5 +107,33 @@ LONG Leviathan::cMinidump::WriteMiniDump(_EXCEPTION_POINTERS* _exceptionInfo)
 
 void Leviathan::cMinidump::VSetDumpFileName()
 {
-	wsprintf(dumpPath, L"%s%s.dmp", appPath, appBaseName);
+	time_t curTime;
+	time(&curTime);
+
+	std::basic_string<TCHAR> path;
+	path = appBaseName;
+	path += L'.';
+	path += _wctime(&curTime);
+	path += L".dump";
+
+	// "\n\0" 문자 삭제
+	{
+		std::basic_string<TCHAR>::size_type pos = path.find(L"\n\0");
+		path.erase(pos, 1);
+	}
+
+	// : 문자 _로 변경
+	while (true)
+	{
+		std::basic_string<TCHAR>::size_type pos = path.find(L":");
+		if (pos != std::basic_string<TCHAR>::npos)
+			path.replace(pos, 1, L"_");
+		else
+			break;
+	}
+
+	path = appPath + path;
+	wsprintf(dumpPath, L"%s", path.c_str());
+
+	wprintf(L"%s", dumpPath);
 }
