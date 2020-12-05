@@ -42,6 +42,9 @@
     <ClCompile Include="utility\logger.cpp">
       <Filter>소스 파일\utility</Filter>
     </ClCompile>
+    <ClCompile Include="common\minidump.cpp">
+      <Filter>소스 파일\common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utility\singleton.h">
@@ -64,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="utility\logger.h">
       <Filter>소스 파일\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="common\minidump.h">
+      <Filter>소스 파일\common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

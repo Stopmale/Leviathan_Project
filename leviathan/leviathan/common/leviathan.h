@@ -22,6 +22,9 @@
 #include "singleton.h"
 //
 
+// common header file include
+#include "minidump.h"
+
 // control header file include
 #include "server_control.h"
 //

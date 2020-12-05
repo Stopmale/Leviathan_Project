@@ -153,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="common\leviathan.cpp" />
+    <ClCompile Include="common\minidump.cpp" />
     <ClCompile Include="common\network.cpp" />
     <ClCompile Include="common\socket.cpp" />
     <ClCompile Include="control\server_control.cpp" />
@@ -162,6 +163,7 @@
   <ItemGroup>
     <ClInclude Include="common\define.h" />
     <ClInclude Include="common\leviathan.h" />
+    <ClInclude Include="common\minidump.h" />
     <ClInclude Include="common\network.h" />
     <ClInclude Include="common\socket.h" />
     <ClInclude Include="control\server_control.h" />

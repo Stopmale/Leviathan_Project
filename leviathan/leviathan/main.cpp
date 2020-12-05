@@ -1,4 +1,11 @@
 ﻿#include "leviathan.h"
+Leviathan::cMinidump gMinidupm;
+
+class test
+{
+public :
+    bool temp;
+};
 
 int main(int argc, char* argv[])
 {
@@ -12,6 +19,10 @@ int main(int argc, char* argv[])
         printf("[SYSTEM] booting failed\n");
         return -1;
     }
+
+    test* obj = new test;
+    obj = NULL;
+    obj->temp = false;
 
     while (!Leviathan::cLeviathan::Instance().ShuttingDown())
     {
