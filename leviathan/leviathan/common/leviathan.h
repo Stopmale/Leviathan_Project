@@ -1,12 +1,5 @@
 ﻿#pragma once
 
-// gperftools
-#ifdef __TC_MALLOC__
-#pragma comment (lib, "libtcmalloc_minimal")
-#pragma comment (linker, "/include:__tcmalloc")
-#endif
-//
-
 // system header file include
 #include <stdio.h>
 #include <iostream>
