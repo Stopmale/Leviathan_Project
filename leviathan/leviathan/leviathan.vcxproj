@@ -134,6 +134,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libtcmalloc_minimal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>__tcmalloc</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -160,6 +161,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libtcmalloc_minimal.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>
