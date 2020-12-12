@@ -181,6 +181,7 @@
     <ClCompile Include="control\server_control.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="utility\logger.cpp" />
+    <ClCompile Include="utility\random.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common\define.h" />
@@ -189,8 +190,9 @@
     <ClInclude Include="common\network.h" />
     <ClInclude Include="common\socket.h" />
     <ClInclude Include="control\server_control.h" />
-    <ClInclude Include="memory_leak.h" />
     <ClInclude Include="utility\logger.h" />
+    <ClInclude Include="utility\memory_leak.h" />
+    <ClInclude Include="utility\random.h" />
     <ClInclude Include="utility\singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

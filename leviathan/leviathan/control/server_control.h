@@ -5,6 +5,7 @@
 namespace Leviathan
 {
 
+#pragma pack(push, 1)
 class cServerControl
 {
 public:
@@ -37,5 +38,6 @@ public:
 	Host GetHost() { return host; }
 	Port GetPort() { return port; }
 };
+#pragma pack(pop)
 
 }

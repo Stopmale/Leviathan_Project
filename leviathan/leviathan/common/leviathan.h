@@ -13,6 +13,7 @@
 // utility header file include
 #include "logger.h"
 #include "singleton.h"
+#include "random.h"
 //
 
 // common header file include
@@ -25,11 +26,33 @@
 namespace Leviathan
 {
 
+class cScopeReadLock
+{
+public:
+	cScopeReadLock() {}
+	cScopeReadLock(SRWLOCK* _lock) { lock = _lock; AcquireSRWLockShared(lock); }
+	~cScopeReadLock() { if (lock) ReleaseSRWLockShared(lock); }
+
+private:
+	SRWLOCK* lock;
+};
+
+class cScopeWriteLock
+{
+public:
+	cScopeWriteLock() {}
+	cScopeWriteLock(SRWLOCK* _lock) { lock = _lock; AcquireSRWLockExclusive(lock); }
+	~cScopeWriteLock() { if (lock) ReleaseSRWLockExclusive(lock); }
+
+private:
+	SRWLOCK* lock;
+};
+
 class cLeviathan : public cServerControl, public cSingleton<cLeviathan>
 {
 public:
-	cLeviathan();
-	virtual ~cLeviathan();
+	cLeviathan() {}
+	virtual ~cLeviathan() {}
 
 private:
 

@@ -45,6 +45,9 @@
     <ClCompile Include="common\minidump.cpp">
       <Filter>소스 파일\common</Filter>
     </ClCompile>
+    <ClCompile Include="utility\random.cpp">
+      <Filter>소스 파일\utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utility\singleton.h">
@@ -71,7 +74,10 @@
     <ClInclude Include="common\minidump.h">
       <Filter>소스 파일\common</Filter>
     </ClInclude>
-    <ClInclude Include="memory_leak.h">
+    <ClInclude Include="utility\memory_leak.h">
+      <Filter>소스 파일\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\random.h">
       <Filter>소스 파일\utility</Filter>
     </ClInclude>
   </ItemGroup>

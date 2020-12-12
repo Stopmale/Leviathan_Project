@@ -1,14 +1,6 @@
 ﻿#include "leviathan.h"
 #include <Windows.h>
 
-Leviathan::cLeviathan::cLeviathan()
-{
-}
-
-Leviathan::cLeviathan::~cLeviathan()
-{
-}
-
 bool Leviathan::cLeviathan::Booting(std::string config)
 {
 	std::cout << "[SYSTEM] booting server..." << std::endl;
@@ -22,6 +14,8 @@ bool Leviathan::cLeviathan::Booting(std::string config)
 	{
 		return false;
 	}
+
+	InitializeRandomSeed();
 
 	std::cout << "[SYSTEM] booting success" << std::endl;
 	return true;
