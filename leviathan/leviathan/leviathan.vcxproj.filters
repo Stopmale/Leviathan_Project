@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\common">
+      <UniqueIdentifier>{1a4a4bb6-f587-4b4f-a8f2-dbfbb12f7686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\utility">
+      <UniqueIdentifier>{f0432197-66b8-4c2e-929f-2275d61a4bb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\control">
+      <UniqueIdentifier>{e93880e3-0b02-4554-91ca-11ed969a592c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="common\leviathan.cpp">
+      <Filter>소스 파일\common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\network.cpp">
+      <Filter>소스 파일\common</Filter>
+    </ClCompile>
+    <ClCompile Include="control\server_control.cpp">
+      <Filter>소스 파일\control</Filter>
+    </ClCompile>
+    <ClCompile Include="common\socket.cpp">
+      <Filter>소스 파일\common</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\logger.cpp">
+      <Filter>소스 파일\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="common\minidump.cpp">
+      <Filter>소스 파일\common</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\random.cpp">
+      <Filter>소스 파일\utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utility\singleton.h">
+      <Filter>소스 파일\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="common\leviathan.h">
+      <Filter>소스 파일\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\network.h">
+      <Filter>소스 파일\common</Filter>
+    </ClInclude>
+    <ClInclude Include="control\server_control.h">
+      <Filter>소스 파일\control</Filter>
+    </ClInclude>
+    <ClInclude Include="common\define.h">
+      <Filter>소스 파일\common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\socket.h">
+      <Filter>소스 파일\common</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\logger.h">
+      <Filter>소스 파일\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="common\minidump.h">
+      <Filter>소스 파일\common</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\memory_leak.h">
+      <Filter>소스 파일\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\random.h">
+      <Filter>소스 파일\utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
