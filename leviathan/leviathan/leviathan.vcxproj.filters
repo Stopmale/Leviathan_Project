@@ -71,5 +71,8 @@
     <ClInclude Include="common\minidump.h">
       <Filter>소스 파일\common</Filter>
     </ClInclude>
+    <ClInclude Include="memory_leak.h">
+      <Filter>소스 파일\utility</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -135,6 +135,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libtcmalloc_minimal.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>__tcmalloc</ForceSymbolReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -161,8 +162,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libtcmalloc_minimal.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ForceSymbolReferences>
-      </ForceSymbolReferences>
+      <ForceSymbolReferences>__tcmalloc</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -189,6 +189,7 @@
     <ClInclude Include="common\network.h" />
     <ClInclude Include="common\socket.h" />
     <ClInclude Include="control\server_control.h" />
+    <ClInclude Include="memory_leak.h" />
     <ClInclude Include="utility\logger.h" />
     <ClInclude Include="utility\singleton.h" />
   </ItemGroup>
